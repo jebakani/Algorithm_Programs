@@ -14,7 +14,9 @@ namespace AlgorithmProblems
             Console.WriteLine("Welcome to Algorithm problems");
             Console.WriteLine("1.Permutation of string");
             Console.WriteLine("2.Binary search for word");
-            Console.WriteLine("3.Exit");
+            Console.WriteLine("3.Insertion sort");
+            Console.WriteLine("4.Bubble sort");
+            Console.WriteLine("5.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -33,7 +35,8 @@ namespace AlgorithmProblems
                     BinarySearchWord binarySearch = new BinarySearchWord(textArray);
                     Console.WriteLine("Enter the word to search:");
                     string word = Console.ReadLine();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     if (found==1)
+                    int found = binarySearch.FindWord(word, 0, textArray.Length);
+                    if (found == 1)
                     {
                         Console.WriteLine("{0} is found",word);
                     }
@@ -48,7 +51,14 @@ namespace AlgorithmProblems
                     insertionSort.Sort(textArray);
                     insertionSort.Display(textArray);
                     break;
-                case 4:            
+
+                case 4:
+                    int[] intArray = { 58, 69, 1, 15, 9, 100, 30 };
+                    BubbleSort<int> bubbleSort = new BubbleSort<int>();
+                    intArray=bubbleSort.Sort(intArray);
+                    bubbleSort.Display(intArray);
+                    break;
+                case 5:
                     break;
                 default:
                     Console.WriteLine("Enter valid option");
