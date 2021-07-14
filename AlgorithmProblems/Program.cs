@@ -54,7 +54,7 @@ namespace AlgorithmProblems
 
                 case 4:
                     int[] intArray = { 58, 69, 1, 15, 9, 100, 30 };
-                    BubbleSort<int> bubbleSort = new BubbleSort<int>();
+                    BubbleSort bubbleSort = new BubbleSort();
                     intArray=bubbleSort.Sort(intArray);
                     bubbleSort.Display(intArray);
                     break;
