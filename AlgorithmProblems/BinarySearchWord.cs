@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems
 {
-    class BinarySearchWord
+    class BinarySearchWord<T> where T:IComparable
     {
-        string[] array;
-        public BinarySearchWord(string[] array)
+        T[] array;
+        public BinarySearchWord(T[] array)
         {
             this.array = array;
             Array.Sort(this.array);
         }
-        public int FindWord(string word,int low,int high)
+        public int FindWord(T word,int low,int high)
         {
             int mid = low;
-            while (low < high)
+            while (low <= high)
             {
                 mid = (high + low) / 2;
-                if (array[mid] == word)
+                if (array[mid].CompareTo(word)==0)
                 {
                     return 1;
                 }
@@ -33,9 +33,9 @@ namespace AlgorithmProblems
                     low = mid + 1;
                 }
             }
-            if(array[mid]!=word)
+            if(array[mid].CompareTo(word)==0)
             {
-                return 0;
+                return 1;
             }
             else
             {

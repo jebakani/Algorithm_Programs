@@ -4,6 +4,14 @@ using System.IO;
 
 namespace AlgorithmProblems
 {
+    /// <summary>
+    /// P1-permutation of string using recurrsion
+    /// P2-Binary search
+    /// P3-insertion sort
+    /// P4-Bubble Sort
+    /// P5-Merge sort
+    /// P6-Search and sort using generic
+    /// </summary>
     class Program
     {
         static void Main(string[] args)
@@ -33,7 +41,7 @@ namespace AlgorithmProblems
                     break;
 
                 case 2:
-                    BinarySearchWord binarySearch = new BinarySearchWord(textArray);
+                    BinarySearchWord<string> binarySearch = new BinarySearchWord<string>(textArray);
                     Console.WriteLine("Enter the word to search:");
                     string word = Console.ReadLine();
                     int found = binarySearch.FindWord(word, 0, textArray.Length);
