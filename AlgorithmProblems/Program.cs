@@ -26,7 +26,8 @@ namespace AlgorithmProblems
             Console.WriteLine("4.Bubble sort");
             Console.WriteLine("5.Merge Sort");
             Console.WriteLine("6.Anagram");
-            Console.WriteLine("7.Exit");
+            Console.WriteLine("7.Prime number between 1-1000");
+            Console.WriteLine("8.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -87,8 +88,13 @@ namespace AlgorithmProblems
                     break;
 
                 case 7:
+                    PrimeNumber primeNumber = new PrimeNumber();
+                    primeNumber.IsPrime();
+                    primeNumber.display();
                     break;
 
+                case 8:
+                    break;
                 default:
                     Console.WriteLine("Enter valid option");
                     break;
