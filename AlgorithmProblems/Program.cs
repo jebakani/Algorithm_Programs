@@ -25,7 +25,8 @@ namespace AlgorithmProblems
             Console.WriteLine("3.Insertion sort");
             Console.WriteLine("4.Bubble sort");
             Console.WriteLine("5.Merge Sort");
-            Console.WriteLine("6.Exit");
+            Console.WriteLine("6.Anagram");
+            Console.WriteLine("7.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -73,7 +74,21 @@ namespace AlgorithmProblems
                     mergeSort.MDisplay(textArray);
                     break;
                 case 6:
+                    Anagram anagram = new Anagram();
+                    int check=anagram.CheckAnagram("abcd","dsac");
+                    if (check == 1)
+                    {
+                        Console.WriteLine("Two strings are anagram");
+                    }
+                    else
+                    {
+                        Console.WriteLine("the strings are not anagram");
+                    }
                     break;
+
+                case 7:
+                    break;
+
                 default:
                     Console.WriteLine("Enter valid option");
                     break;
