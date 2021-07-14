@@ -27,6 +27,7 @@ namespace AlgorithmProblems
             Console.WriteLine("5.Merge Sort");
             Console.WriteLine("6.Anagram");
             Console.WriteLine("7.Prime number between 1-1000");
+            Console.WriteLine("8.Palindrome and anagrams of prime ");
             Console.WriteLine("8.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -91,9 +92,15 @@ namespace AlgorithmProblems
                     PrimeNumber primeNumber = new PrimeNumber();
                     primeNumber.IsPrime();
                     primeNumber.display();
+                    primeNumber.PrintPalindrome();
+                    primeNumber.CheckAnagram();
                     break;
 
                 case 8:
+                    PrimeNumber primeNumber1 = new PrimeNumber();
+                    primeNumber1.IsPrime();
+                    primeNumber1.PrintPalindrome();
+                    primeNumber1.CheckAnagram();
                     break;
                 default:
                     Console.WriteLine("Enter valid option");
