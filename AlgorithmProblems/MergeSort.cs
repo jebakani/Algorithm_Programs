@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems
 {
-    class MergeSort<T> where T:IComparable
+    class MergeSort
     {
-        protected void Merge(T[] arr,int left,int mid,int right)
+        protected void Merge(string[] arr,int left,int mid,int right)
         {
             int leftLen = mid - left + 1;
             int rightLen = right - mid;
             //create a temp array
-            T[] leftArr = new T[leftLen];
-            T[] rightArr = new T[rightLen];
+            string[] leftArr = new string[leftLen];
+            string[] rightArr = new string[rightLen];
             int i, j;
             //coppy the data to temp array
             for(i=0;i<leftLen;i++)
@@ -58,7 +58,7 @@ namespace AlgorithmProblems
                 j++;
                 k++;
             }        }
-        public void Msort(T[] arr,int left,int right)
+        public void Msort(string[] arr,int left,int right)
         {
             if(left<right)
             {
@@ -72,7 +72,7 @@ namespace AlgorithmProblems
             }
         }
 
-        public void MDisplay(T[] arr)
+        public void MDisplay(string[] arr)
         {
             for(int i=0;i<arr.Length;i++)
             {

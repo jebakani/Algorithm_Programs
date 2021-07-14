@@ -60,7 +60,7 @@ namespace AlgorithmProblems
                     bubbleSort.Display(intArray);
                     break;
                 case 5:
-                    MergeSort<string> mergeSort = new MergeSort<string>();
+                    MergeSort mergeSort = new MergeSort();
                     mergeSort.Msort(textArray, 0, textArray.Length - 1);
                     mergeSort.MDisplay(textArray);
                     break;
