@@ -14,7 +14,8 @@ namespace AlgorithmProblems
             Console.WriteLine("Welcome to Algorithm problems");
             Console.WriteLine("1.Permutation of string");
             Console.WriteLine("2.Binary search for word");
-            Console.WriteLine("3.Exit");
+            Console.WriteLine("3.Insertion Sort");
+            Console.WriteLine("4.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -33,7 +34,8 @@ namespace AlgorithmProblems
                     BinarySearchWord binarySearch = new BinarySearchWord(textArray);
                     Console.WriteLine("Enter the word to search:");
                     string word = Console.ReadLine();
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     if (found==1)
+                    int found = binarySearch.FindWord(word,0,textArray.Length-1);
+                    if(found==1)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
                     {
                         Console.WriteLine("{0} is found",word);
                     }
@@ -44,7 +46,7 @@ namespace AlgorithmProblems
                     break;
 
                 case 3:
-                    InsertionSort<string> insertionSort = new InsertionSort<string>();
+                    InsertionSort insertionSort = new InsertionSort();
                     insertionSort.Sort(textArray);
                     insertionSort.Display(textArray);
                     break;

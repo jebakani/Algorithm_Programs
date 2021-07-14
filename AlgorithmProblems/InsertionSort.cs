@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace AlgorithmProblems
 {
-    class InsertionSort<T> where T:IComparable
+    class InsertionSort
     {
-        public void Sort(T[] array)
+        public void Sort(string[] array)
         {
-            T maxValue;
+            string maxValue;
             for(int i=1;i<array.Length;i++)
             {
                 //make first element as maximum value
@@ -28,7 +28,7 @@ namespace AlgorithmProblems
             }
         }
 
-        public void Display(T[] array)
+        public void Display(string[] array)
         {
             for(int i=0;i<array.Length;i++)
             {
