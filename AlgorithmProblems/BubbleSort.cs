@@ -27,6 +27,7 @@ namespace AlgorithmProblems
             }
             return array;
         }
+        //method to display the sorted array
         public void Display(T[] array)
         {
             for (int i = 0; i < array.Length; i++)

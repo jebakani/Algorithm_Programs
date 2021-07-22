@@ -29,7 +29,8 @@ namespace AlgorithmProblems
             Console.WriteLine("7.Prime number between 1-1000");
             Console.WriteLine("8.Palindrome and anagrams of prime ");
             Console.WriteLine("9.Magic Number");
-            Console.WriteLine("10.Exit");
+            Console.WriteLine("10.Message Demonstration");
+            Console.WriteLine("11.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -108,6 +109,10 @@ namespace AlgorithmProblems
                     Console.WriteLine("choose a number between 1-100");
                     MagicNumber magic = new MagicNumber();
                     magic.ThinkNumber();
+                    break;
+                case 10:
+                    MessageDemonstration message = new MessageDemonstration();
+                    message.Demonstrate();
                     break;
                 default:
                     Console.WriteLine("Enter valid option");

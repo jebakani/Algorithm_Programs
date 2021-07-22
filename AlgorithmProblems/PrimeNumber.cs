@@ -10,6 +10,7 @@ namespace AlgorithmProblems
     {
         ArrayList array = new ArrayList();
         ArrayList primePali = new ArrayList();
+        //method to find the number is prime or not 
         public void IsPrime()
         {
             int flag;
@@ -57,6 +58,7 @@ namespace AlgorithmProblems
             }
         }
 
+        //checks whethere the number is anagram or not using anagram class
         public void CheckAnagram()
         {
             string[] strOfPrime = new string[array.Count];
