@@ -30,7 +30,8 @@ namespace AlgorithmProblems
             Console.WriteLine("8.Palindrome and anagrams of prime ");
             Console.WriteLine("9.Magic Number");
             Console.WriteLine("10.Message Demonstration");
-            Console.WriteLine("11.Exit");
+            Console.WriteLine("11.Job scheduling");
+            Console.WriteLine("12.Exit");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch(choice)
@@ -113,6 +114,10 @@ namespace AlgorithmProblems
                 case 10:
                     MessageDemonstration message = new MessageDemonstration();
                     message.Demonstrate();
+                    break;
+                case 11:
+                    TaskScheduling taskScheduling = new TaskScheduling();
+                    taskScheduling.JobSchedule();
                     break;
                 default:
                     Console.WriteLine("Enter valid option");
